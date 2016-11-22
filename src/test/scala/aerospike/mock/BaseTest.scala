@@ -3,6 +3,7 @@ package aerospike.mock
 import com.aerospike.client.async.IAsyncClient
 import com.aerospike.client.{Bin, Key}
 import com.aerospike.client.policy.WritePolicy
+import com.github.danymarialee.mock.MockAerospike
 import org.scalatest.{FlatSpec, Matchers}
 
 /**

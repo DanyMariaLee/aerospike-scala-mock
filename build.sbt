@@ -4,7 +4,7 @@ import de.heikoseeberger.sbtheader.HeaderPattern
 
 
 name := "aerospike-mock"
-version := "1.0.1"
+version := "1.0.2"
 organization := "com.github.danymarialee"
 scalaVersion := "2.11.8"
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")

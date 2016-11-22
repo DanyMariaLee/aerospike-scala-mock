@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-                        package aerospike.mock
+package com.github.danymarialee.mock
 
 import java.util.concurrent.{BlockingQueue, DelayQueue}
 import com.aerospike.client.Value.StringValue
@@ -285,6 +285,7 @@ case class ExistsArrayHandler(keys: Array[Key] = Array(new Key("kName", "ns", 1)
 
 case class ExistsSequenceHandler(k: Key = new Key("kName", "ns", 1), exists: Boolean = true) extends ExistsSequenceListener {
   def onExists(key: Key, exists: Boolean): Unit = {}
+
   def onSuccess(): Unit = {}
 
   def onFailure(e: AerospikeException): Unit = e.printStackTrace()
@@ -292,6 +293,7 @@ case class ExistsSequenceHandler(k: Key = new Key("kName", "ns", 1), exists: Boo
 
 case class RecordSequenceHandler(k: Key = new Key("kName", "ns", 1), record: Record = new Record(Map("k" -> new StringValue("v")), 100, 12)) extends RecordSequenceListener {
   def onRecord(key: Key, record: Record): Unit = {}
+
   def onSuccess(): Unit = {}
 
   def onFailure(e: AerospikeException): Unit = e.printStackTrace()
