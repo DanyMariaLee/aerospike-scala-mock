@@ -2,7 +2,7 @@
 
 How to get 
 ```scala
-"com.github.danymarialee" % "aerospike-mock_2.11" % "1.0.2"
+"com.github.danymarialee" %% "aerospike-mock" % "1.0.4"
  ```
 
 Mock class has all methods with result types. Implemented like so:

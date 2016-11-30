@@ -4,20 +4,18 @@ import de.heikoseeberger.sbtheader.HeaderPattern
 
 
 name := "aerospike-mock"
-version := "1.0.2"
+version := "1.0.4"
 organization := "com.github.danymarialee"
-scalaVersion := "2.11.8"
+scalaVersion := "2.12.0"
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
-crossScalaVersions := Seq("2.10.6", "2.11.8")
+crossScalaVersions := Seq("2.10.6", "2.11.8", "2.12.0")
 sonatypeProfileName := "com.github.danymarialee"
 
 useGpg := true
 pgpReadOnly := false
 
-//enablePlugins(AutomateHeaderPlugin)
-
-libraryDependencies ++= Seq("com.aerospike" % "aerospike-client" % "3.3.0",
-  "org.scalatest" %% "scalatest" % "2.2.5" % "test")
+libraryDependencies ++= Seq("com.aerospike" % "aerospike-client" % "3.3.1",
+  "org.scalatest" %% "scalatest" % "3.0.1" % "test")
 
 headers := Map(
   "scala" -> (
@@ -67,9 +65,11 @@ pomExtra in Global := {
 
 scmInfo := Some(ScmInfo(
   url("http://github.com/DanyMariaLee"),
-  "scm:git:github.com/DanyMariaLee/AeroSpikeClientMock",
-  Some("scm:git:git@github.com:DanyMariaLee/AeroSpikeClientMock.git")
+  "scm:git:github.com/DanyMariaLee/aerospike-scala-mock",
+  Some("scm:git:git@github.com:DanyMariaLee/aerospike-scala-mock.git")
 ))
+
+releaseCrossBuild := true
 
 credentials += Credentials("Sonatype Nexus Repository Manager",
   "oss.sonatype.org",

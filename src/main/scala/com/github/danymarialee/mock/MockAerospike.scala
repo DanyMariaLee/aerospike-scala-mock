@@ -76,7 +76,7 @@ class MockAerospike extends IAsyncClient {
 
   def get(policy: BatchPolicy, records: java.util.List[BatchRead]): Unit = ???
 
-  def get(policy: BatchPolicy, keys: Array[Key], binNames: String*): Record = ???
+  def get(policy: BatchPolicy, keys: Array[Key], binNames: String*): Array[Record] = ???
 
   def prepend(policy: WritePolicy, key: Key, bins: Bin*): Unit = ???
 
@@ -180,7 +180,7 @@ class MockAerospike extends IAsyncClient {
 
   def removeUdf(policy: InfoPolicy, serverPath: String): Unit = ???
 
-  def execute(policy: WritePolicy, key: Key, packageName: String, functionName: String, args: Value*): Any = ???
+  def execute(policy: WritePolicy, key: Key, packageName: String, functionName: String, args: Value*): Object = ???
 
   def execute(policy: WritePolicy, statement: Statement, packageName: String, functionName: String, functionArgs: Value*): ExecuteTask = ???
 
